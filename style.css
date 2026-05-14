@@ -56,6 +56,7 @@ body {
   display: flex;
   align-items: center;
   padding: 4rem 2.5rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .about-content {
@@ -95,6 +96,65 @@ body {
   line-height: 1.85;
 }
 
+.skills-section {
+  padding: 4rem 2.5rem 5rem;
+}
+
+.skills-content {
+  width: min(1100px, 100%);
+}
+
+.section-label {
+  margin: 0 0 1rem;
+  color: var(--red);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.skills-content h2 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.skill-group {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.skill-group h3 {
+  margin: 0 0 1rem;
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.skill-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skill-group li {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 640px) {
   .site-header {
     padding: 1rem;
@@ -106,5 +166,21 @@ body {
 
   .about-section {
     padding: 2.5rem 1rem;
+  }
+
+  .skills-section {
+    padding: 2.5rem 1rem 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
