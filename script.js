@@ -2,7 +2,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll(".reveal");
-const sections = document.querySelectorAll("main section");
+const sections = document.querySelectorAll(".panel");
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -22,7 +22,7 @@ navLinks.forEach((link) => {
 });
 
 if ("IntersectionObserver" in window) {
-  const sectionObserver = new IntersectionObserver(
+  const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
@@ -30,15 +30,14 @@ if ("IntersectionObserver" in window) {
         }
 
         entry.target.classList.add("visible");
-        sectionObserver.unobserve(entry.target);
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.24 }
   );
 
   revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 90}ms`;
-    sectionObserver.observe(item);
+    item.style.transitionDelay = `${index * 80}ms`;
+    revealObserver.observe(item);
   });
 
   const navObserver = new IntersectionObserver(
@@ -49,13 +48,13 @@ if ("IntersectionObserver" in window) {
         }
 
         navLinks.forEach((link) => {
-          const matches = link.getAttribute("href") === `#${entry.target.id}`;
-          link.classList.toggle("active", matches);
+          const isMatch = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("active", isMatch);
         });
       });
     },
     {
-      rootMargin: "-40% 0px -45% 0px",
+      rootMargin: "-45% 0px -40% 0px",
       threshold: 0
     }
   );
