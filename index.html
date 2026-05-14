@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <meta
+    name="description"
+    content="A modern personal portfolio showcasing experience, featured projects, and contact information."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#home">Your Name</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Creative developer / Designer / Problem solver</p>
+          <h1>Building digital experiences with personality and precision.</h1>
+          <p class="hero-text">
+            I design and develop clean, high-impact websites that help people,
+            products, and ideas stand out with clarity.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-secondary" href="#contact">Let's Talk</a>
+          </div>
+        </div>
+        <aside class="hero-card reveal">
+          <p class="card-label">Currently focused on</p>
+          <ul>
+            <li>Responsive frontend interfaces</li>
+            <li>Brand-driven portfolio websites</li>
+            <li>Fast, accessible user experiences</li>
+          </ul>
+          <div class="hero-metric">
+            <strong>3+</strong>
+            <span>Years learning, shipping, and refining craft</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="about reveal" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Thoughtful design, practical execution.</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+            I enjoy turning ideas into polished, usable products. My work blends
+            visual design, clean frontend code, and a focus on performance so
+            every project feels as good as it looks.
+          </p>
+          <p>
+            Whether it is a landing page, portfolio, or product interface, I care
+            about storytelling, responsiveness, and details that make people stay.
+          </p>
+        </div>
+        <div class="skill-pills">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+          <span>UI Systems</span>
+          <span>Accessibility</span>
+        </div>
+      </section>
+
+      <section class="projects reveal" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects that balance style and substance.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-index">01</p>
+            <h3>Studio Landing Page</h3>
+            <p>
+              A bold marketing site with custom layout rhythm, animated callouts,
+              and a conversion-first structure.
+            </p>
+            <a href="#contact">Available for similar work</a>
+          </article>
+          <article class="project-card">
+            <p class="project-index">02</p>
+            <h3>Personal Brand Portfolio</h3>
+            <p>
+              A clean, editorial-style portfolio built to highlight expertise,
+              projects, and a memorable voice.
+            </p>
+            <a href="#contact">Request a portfolio build</a>
+          </article>
+          <article class="project-card">
+            <p class="project-index">03</p>
+            <h3>Product Showcase UI</h3>
+            <p>
+              A responsive interface concept focused on usability, sharp visuals,
+              and concise content hierarchy.
+            </p>
+            <a href="#contact">Discuss your idea</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="services reveal" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>What I can help you build.</h2>
+        </div>
+        <div class="service-list">
+          <article>
+            <h3>Portfolio Websites</h3>
+            <p>Elegant, responsive sites crafted to showcase your work with confidence.</p>
+          </article>
+          <article>
+            <h3>Landing Pages</h3>
+            <p>Focused pages designed to communicate clearly and convert effectively.</p>
+          </article>
+          <article>
+            <h3>Frontend Development</h3>
+            <p>Semantic HTML, maintainable CSS, and interactive JavaScript that stays lightweight.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact reveal" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something worth remembering.</h2>
+        </div>
+        <div class="contact-panel">
+          <p>
+            Available for freelance work, collaborations, and new opportunities.
+            Reach out and let’s create something sharp, useful, and distinctive.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
