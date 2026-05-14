@@ -1,65 +1,66 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
-const navLinks = document.querySelectorAll(".site-nav a");
-const revealItems = document.querySelectorAll(".reveal");
-const sections = document.querySelectorAll(".panel");
-
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    siteNav.classList.toggle("open");
-  });
-}
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth <= 720 && siteNav && menuToggle) {
-      siteNav.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-});
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        entry.target.classList.add("visible");
-      });
-    },
-    { threshold: 0.24 }
-  );
-
-  revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 80}ms`;
-    revealObserver.observe(item);
-  });
-
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        navLinks.forEach((link) => {
-          const isMatch = link.getAttribute("href") === `#${entry.target.id}`;
-          link.classList.toggle("active", isMatch);
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal Animations on Scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
         });
-      });
-    },
-    {
-      rootMargin: "-45% 0px -40% 0px",
-      threshold: 0
-    }
-  );
+    }, {
+        threshold: 0.1
+    });
 
-  sections.forEach((section) => navObserver.observe(section));
-} else {
-  revealItems.forEach((item) => item.classList.add("visible"));
-}
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Header Blur Effect on Scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(5, 5, 5, 0.8)';
+            header.style.padding = '0.75rem 2rem';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.03)';
+            header.style.padding = '1rem 2rem';
+        }
+    });
+
+    // Smooth Scrolling for Nav Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Project Card Hover Parallax Effect (Subtle)
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
+        });
+    });
+});

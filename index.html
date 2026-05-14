@@ -1,91 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Vemula | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Harshith Vemula, a passionate Full Stack Developer specializing in modern web experiences.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="site-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="about-section" id="about">
-      <div class="about-content">
-        <p class="about-label">About Me</p>
-        <h1>Harshith Vemula</h1>
-        <h2>Full Stack Web Developer</h2>
-        <p class="about-summary">
-          I create clean and responsive websites with a strong focus on usability.
-          I enjoy turning ideas into simple digital experiences that feel modern and effective.
-        </p>
-      </div>
-    </section>
+    <header class="header glass">
+        <a href="#" class="logo">HV.</a>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Hire Me</a>
+    </header>
 
-    <section class="skills-section" id="skills">
-      <div class="skills-content">
-        <p class="section-label">Skills</p>
-        
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="portfolio_hero_abstract_1778773706473.png" alt="Futuristic Background" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-tag">Available for Internships</span>
+                <h1>Crafting <span class="gradient-text">Digital</span> <br>Masterpieces</h1>
+                <p>Hi, I'm Harshith Vemula. I bridge the gap between complex logic and stunning visual interfaces. Let's build something extraordinary.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="skills-grid">
-          <article class="skill-group">
-            <h3>Languages</h3>
-            <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>C</li>
-              <li>SQL</li>
-            </ul>
-          </article>
+        <!-- About / Skills -->
+        <section id="about" class="container">
+            <div class="section-header reveal">
+                <p class="hero-tag">My Expertise</p>
+                <h2>Technical Toolkit</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass reveal">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Java (Spring Boot)</li>
+                        <li>Python (Django/Flask)</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>SQL & C</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass reveal">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Next.js</li>
+                        <li>Modern CSS/SCSS</li>
+                        <li>Framer Motion</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass reveal">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Node.js / Express</li>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card glass reveal">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS / Vercel</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-          <article class="skill-group">
-            <h3>Frameworks</h3>
-            <ul>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Bootstrap</li>
-            </ul>
-          </article>
+        <!-- Projects -->
+        <section id="projects" class="container">
+            <div class="section-header reveal">
+                <p class="hero-tag">Portfolio</p>
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass reveal" style="background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop') center/cover;">
+                    <div class="project-info">
+                        <h3>AI Task Orchestrator</h3>
+                        <p>A smart productivity tool that uses AI to prioritize and automate daily tasks.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass reveal" style="background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop') center/cover;">
+                    <div class="project-info">
+                        <h3>DataVis Analytics</h3>
+                        <p>Real-time student performance analysis dashboard with predictive modeling.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <article class="skill-group">
-            <h3>Database</h3>
-            <ul>
-              <li>MySQL</li>
-              <li>MongoDB</li>
-            </ul>
-          </article>
+        <!-- Experience -->
+        <section id="experience" class="container">
+            <div class="section-header reveal">
+                <p class="hero-tag">Journey</p>
+                <h2>Experience & Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <p class="timeline-date">2024 - Present</p>
+                    <h3>Full Stack Intern</h3>
+                    <p class="text-secondary">TechSolutions Corp</p>
+                    <p>Spearheading the migration of legacy systems to modern React architecture, improving performance by 40%.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <p class="timeline-date">2021 - 2025</p>
+                    <h3>B.Tech in Computer Science</h3>
+                    <p class="text-secondary">VNR Vignana Jyothi Institute</p>
+                    <p>Focusing on Distributed Systems, Machine Learning, and Web Architecture.</p>
+                </div>
+            </div>
+        </section>
 
-          <article class="skill-group">
-            <h3>Tools</h3>
-            <ul>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>VS Code</li>
-              <li>Postman</li>
-              <li>NumPy</li>
-              <li>Pandas</li>
-            </ul>
-          </article>
+        <!-- Contact -->
+        <section id="contact" class="container">
+            <div class="section-header reveal">
+                <p class="hero-tag">Get In Touch</p>
+                <h2>Let's Start a Conversation</h2>
+            </div>
+            <div class="glass reveal" style="padding: 4rem; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;">Have a project in mind?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 3rem;">I'm currently looking for internship opportunities and freelance projects. Reach out and let's build something amazing.</p>
+                <a href="mailto:harshith@example.com" class="btn btn-primary">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 Harshith Vemula. All rights reserved.</p>
         </div>
-      </div>
-    </section>
-  </main>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
