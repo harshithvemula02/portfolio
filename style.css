@@ -642,40 +642,95 @@ footer > .container {
 }
 
 /* --- Contact --- */
-.contact-container {
-    max-width: 760px;
+.contact-card {
+    max-width: 800px;
     margin: 0 auto;
+    padding: 3.5rem 2rem;
+    text-align: center;
 }
 
-.contact-form {
-    padding: 2.5rem;
+.primary-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 10vw, 5rem);
+    margin-top: 3rem;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
+.primary-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
     color: var(--text-secondary);
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    padding: 1rem;
-    border-radius: 12px;
-    color: white;
-    outline: none;
     transition: var(--transition-smooth);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.primary-icon-box i {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    color: var(--text-primary);
+}
+
+.primary-icon-box span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.primary-icon-box:hover i {
+    transform: scale(1.1);
     border-color: var(--bmw-blue);
+    color: var(--bmw-blue);
+    box-shadow: 0 0 40px rgba(0, 150, 255, 0.25);
+}
+
+.primary-icon-box.email:hover i {
+    border-color: var(--bmw-red);
+    color: var(--bmw-red);
+    box-shadow: 0 0 40px rgba(225, 6, 0, 0.25);
+}
+
+.secondary-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.secondary-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.secondary-link:hover {
+    color: white;
     background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.secondary-link i {
+    font-size: 1.3rem;
+    color: var(--bmw-blue);
 }
 
 /* --- Footer --- */
