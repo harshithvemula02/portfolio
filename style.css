@@ -57,22 +57,23 @@ body {
 
 /* --- Components --- */
 .container {
-    max-width: 1180px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-main > section:not(.hero).container,
-footer .container {
-    max-width: 1280px;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    width: 100%;
 }
 
 main > section:not(.hero) {
+    width: 100%;
+    max-width: none;
     padding: 4.5rem 0;
     position: relative;
     overflow: hidden;
     isolation: isolate;
+}
+
+footer .container {
+    max-width: 1400px;
 }
 
 main > section:not(.hero)::before,
@@ -568,25 +569,27 @@ footer > .container {
     color: var(--bmw-red);
 }
 
-.project-actions {
+.project-links {
     display: flex;
-    gap: 0.7rem;
+    gap: 1.5rem;
     margin-top: auto;
     padding-top: 1.2rem;
 }
 
-.project-actions .btn-m {
-    padding: 0.6rem 1rem;
-    font-size: 0.82rem;
+.project-link {
+    font-size: 1.35rem;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex: 1;
+    text-decoration: none;
 }
 
-.project-icon-btn img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    display: block;
+.project-link:hover {
+    color: var(--bmw-blue);
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 8px rgba(0, 150, 255, 0.5));
 }
 
 .project-card:hover {
